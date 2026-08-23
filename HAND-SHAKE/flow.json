@@ -1,0 +1,24 @@
+{
+    "default_part": "XC7Z010-1CLG400C-1", 
+    "values": {
+        "top": "handshake_top"
+    },
+    "dependencies": {
+        "sources": [
+            "producer.v",
+            "consumer.v",
+            "handshake_top.v"
+        ],
+        "synth_log": "synth.log",
+        "pack_log": "pack.log"
+    },
+    "XC7Z010-1CLG400C-1": {
+        "default_target": "bitstream",
+        "dependencies": {
+            "build_dir": "build/zybo",
+            "xdc": [
+                "zybo.xdc"
+            ]
+        }
+    }
+}
