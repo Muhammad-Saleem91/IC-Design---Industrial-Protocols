@@ -1,0 +1,370 @@
+$date
+	Mon Aug 24 01:55:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module axi_tb $end
+$var wire 1 ! WVALID $end
+$var wire 4 " WSTRB [3:0] $end
+$var wire 1 # WREADY $end
+$var wire 32 $ WDATA [31:0] $end
+$var wire 1 % RVALID $end
+$var wire 2 & RRESP [1:0] $end
+$var wire 1 ' RREADY $end
+$var wire 32 ( RDATA [31:0] $end
+$var wire 1 ) BVALID $end
+$var wire 2 * BRESP [1:0] $end
+$var wire 1 + BREADY $end
+$var wire 1 , AWVALID $end
+$var wire 1 - AWREADY $end
+$var wire 32 . AWADDR [31:0] $end
+$var wire 1 / ARVALID $end
+$var wire 1 0 ARREADY $end
+$var wire 32 1 ARADDR [31:0] $end
+$var parameter 32 2 ADDRESS_WIDTH $end
+$var parameter 32 3 DATA_WIDTH $end
+$var reg 1 4 ACLK $end
+$var reg 1 5 ARESETN $end
+$var reg 1 6 START_READ $end
+$var reg 1 7 START_WRITE $end
+$var reg 32 8 W_data [31:0] $end
+$var reg 32 9 address [31:0] $end
+$scope module master_inst $end
+$var wire 1 4 ACLK $end
+$var wire 1 5 ARESETN $end
+$var wire 1 6 START_READ $end
+$var wire 1 7 START_WRITE $end
+$var wire 32 : W_data [31:0] $end
+$var wire 32 ; address [31:0] $end
+$var wire 1 # WREADY $end
+$var wire 1 % RVALID $end
+$var wire 2 < RRESP [1:0] $end
+$var wire 32 = RDATA [31:0] $end
+$var wire 1 ) BVALID $end
+$var wire 2 > BRESP [1:0] $end
+$var wire 1 - AWREADY $end
+$var wire 1 0 ARREADY $end
+$var parameter 32 ? ADDRESS_WIDTH $end
+$var parameter 32 @ DATA_WIDTH $end
+$var parameter 3 A IDLE $end
+$var parameter 3 B RADDR_CHANNEL $end
+$var parameter 3 C RDATA_CHANNEL $end
+$var parameter 3 D WRESP_CHANNEL $end
+$var parameter 3 E WRITE_CHANNEL $end
+$var reg 32 F ARADDR [31:0] $end
+$var reg 1 / ARVALID $end
+$var reg 32 G AWADDR [31:0] $end
+$var reg 1 , AWVALID $end
+$var reg 1 + BREADY $end
+$var reg 1 ' RREADY $end
+$var reg 32 H WDATA [31:0] $end
+$var reg 4 I WSTRB [3:0] $end
+$var reg 1 ! WVALID $end
+$var reg 3 J next_state [2:0] $end
+$var reg 3 K state [2:0] $end
+$upscope $end
+$scope module slave_inst $end
+$var wire 1 4 ACLK $end
+$var wire 32 L ARADDR [31:0] $end
+$var wire 1 5 ARESETN $end
+$var wire 1 / ARVALID $end
+$var wire 32 M AWADDR [31:0] $end
+$var wire 1 , AWVALID $end
+$var wire 1 + BREADY $end
+$var wire 1 ' RREADY $end
+$var wire 32 N WDATA [31:0] $end
+$var wire 4 O WSTRB [3:0] $end
+$var wire 1 ! WVALID $end
+$var parameter 32 P ADDRESS_WIDTH $end
+$var parameter 32 Q DATA_WIDTH $end
+$var reg 1 0 ARREADY $end
+$var reg 1 - AWREADY $end
+$var reg 2 R BRESP [1:0] $end
+$var reg 1 ) BVALID $end
+$var reg 32 S RDATA [31:0] $end
+$var reg 2 T RRESP [1:0] $end
+$var reg 1 % RVALID $end
+$var reg 1 # WREADY $end
+$var reg 32 U read_addr_reg [31:0] $end
+$var reg 32 V write_addr_reg [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 Q
+b100000 P
+b11 E
+b100 D
+b10 C
+b1 B
+b0 A
+b100000 @
+b100000 ?
+b100000 3
+b100000 2
+$end
+#0
+$dumpvars
+bx V
+bx U
+b0 T
+b0 S
+b0 R
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+07
+06
+05
+04
+b0 1
+00
+0/
+b0 .
+0-
+0,
+0+
+b0 *
+0)
+b0 (
+0'
+b0 &
+0%
+b0 $
+0#
+b0 "
+0!
+$end
+#5000
+14
+#10000
+04
+#15000
+14
+#20000
+04
+15
+#25000
+14
+#30000
+04
+#35000
+14
+#40000
+b11 J
+04
+17
+b11011110101011011011111011101111 8
+b11011110101011011011111011101111 :
+b10000 9
+b10000 ;
+#45000
+1!
+b1111 "
+b1111 I
+b1111 O
+b11011110101011011011111011101111 $
+b11011110101011011011111011101111 H
+b11011110101011011011111011101111 N
+1,
+b10000 .
+b10000 G
+b10000 M
+b11 K
+14
+#50000
+04
+07
+#55000
+b100 J
+1!
+1,
+1#
+b10000 V
+1-
+14
+#60000
+04
+#65000
+b0 J
+1)
+0#
+0-
+1+
+0!
+0,
+b100 K
+14
+#70000
+04
+#75000
+b0 K
+0+
+0)
+14
+#80000
+04
+#85000
+1/
+b10000 1
+b10000 F
+b10000 L
+b1 K
+b1 J
+14
+16
+#90000
+04
+#95000
+b10 J
+1/
+b10000 U
+10
+14
+06
+#100000
+04
+#105000
+b0 J
+b11011110101011011011111011101111 (
+b11011110101011011011111011101111 =
+b11011110101011011011111011101111 S
+1%
+00
+1'
+0/
+b10 K
+14
+#110000
+04
+#115000
+b0 K
+0'
+0%
+14
+#120000
+04
+#125000
+1!
+b10111010110100001011101011010000 $
+b10111010110100001011101011010000 H
+b10111010110100001011101011010000 N
+1,
+b1000000000 .
+b1000000000 G
+b1000000000 M
+b11 K
+b11 J
+14
+17
+b10111010110100001011101011010000 8
+b10111010110100001011101011010000 :
+b1000000000 9
+b1000000000 ;
+#130000
+04
+#135000
+b100 J
+1!
+1,
+1#
+b1000000000 V
+1-
+14
+07
+#140000
+04
+#145000
+b0 J
+1)
+b10 *
+b10 >
+b10 R
+0#
+0-
+1+
+0!
+0,
+b100 K
+14
+#150000
+04
+#155000
+b0 K
+0+
+0)
+14
+#160000
+04
+#165000
+1/
+b1000000000 1
+b1000000000 F
+b1000000000 L
+b1 K
+b1 J
+14
+16
+#170000
+04
+#175000
+b10 J
+1/
+b1000000000 U
+10
+14
+06
+#180000
+04
+#185000
+b0 J
+b10 &
+b10 <
+b10 T
+b0 (
+b0 =
+b0 S
+1%
+00
+1'
+0/
+b10 K
+14
+#190000
+04
+#195000
+b0 K
+0'
+0%
+14
+#200000
+04
+#205000
+14
+#210000
+04
+#215000
+14
+#220000
+04
+#225000
+14
