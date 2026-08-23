@@ -26,7 +26,6 @@ The provided starter code contained intentional protocol violations and missing 
 Below is the GTKWave simulation output verifying all 5 test cases, including the wait-state stalls, INCR4 burst counting, and the 2-cycle error response.
 
 ![AHB Waveform Verification](./ahb_waveform.png)
-_(Note: Please save your GTKWave screenshot as `ahb_waveform.png` in this folder so it renders here)._
 
 ---
 

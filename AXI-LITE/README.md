@@ -1,14 +1,16 @@
 # AMBA AXI-Lite Lab
 
 **Author:** Muhammad Saleem  
-**Program:** INSPIRE - PSEB National Semiconductor Upskilling Program (Digital IC Design & Verification)  
+**Program:** INSPIRE - PSEB National Semiconductor Upskilling Program (Digital IC Design & Verification)
 
 ## Overview
-This repository contains the RTL implementation and verification of an Advanced eXtensible Interface (AXI4-Lite) System-on-Chip architecture. The system consists of an AXI-Lite Master and a memory-mapped Slave designed completely from scratch. 
+
+This repository contains the RTL implementation and verification of an Advanced eXtensible Interface (AXI4-Lite) System-on-Chip architecture. The system consists of an AXI-Lite Master and a memory-mapped Slave designed completely from scratch.
 
 The goal of this lab was to design the complete AXI-Lite infrastructure by implementing a strict Finite State Machine (FSM) for the Master and ensuring strict adherence to the AMBA AXI handshaking protocol across all five independent channels.
 
 ## Lab Details & Verification
+
 The design successfully implements the required two-way handshake mechanism where transfers only occur when both `VALID` and `READY` are asserted. The following features were implemented and verified via the testbench (`axi_tb.v`):
 
 1. **Independent Channel Execution:** The master correctly drives the Write Address (AW) and Write Data (W) channels simultaneously to initiate transactions.
@@ -18,7 +20,7 @@ The design successfully implements the required two-way handshake mechanism wher
 5. **Out-of-Bounds Read Error (TC4):** Reading from an unmapped memory region successfully triggers a `SLVERR` response on the R channel.
 
 ### Waveform Verification
+
 Below is the GTKWave simulation output verifying all 4 test cases, including the standard read/write handshakes and the slave error responses.
 
 ![AXI-Lite Waveform Verification](./axi_waveform.png)
-*(Note: Please save your GTKWave screenshot as `axi_waveform.png` in this folder so it renders here).*
