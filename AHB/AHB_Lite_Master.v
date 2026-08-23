@@ -34,7 +34,7 @@ module AHB_Lite_Master (
     // State register
     always @(posedge HCLK or negedge HRESETn) begin
         if (!HRESETn) cs <= IDLE;
-        else          cs <= ns;
+        else if (HREADY) cs <= ns;
     end
 
     // Next-state logic
@@ -77,7 +77,7 @@ module AHB_Lite_Master (
             HTRANS     <= 2'b00;
             HBURST     <= 3'b000;
             beat_cnt   <= 2'd0;
-        end else begin
+        end else if (HREADY) begin
             case (cs)
                 IDLE: begin
                     HADDR      <= 32'b0;
